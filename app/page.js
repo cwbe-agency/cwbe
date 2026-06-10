@@ -2,6 +2,8 @@
 
 import { useState, useEffect, createElement } from 'react'
 import { motion as fmMotion, AnimatePresence } from 'framer-motion'
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 // Shim: render plain DOM elements, strip framer-motion animation props.
 // (framer-motion's animate is not engaging in this environment, so we bypass it
@@ -228,61 +230,6 @@ const SectionHeading = ({ eyebrow, title, subtitle, align = 'center' }) => (
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   show: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] } }),
-}
-
-/* ==================== NAVBAR ==================== */
-function Navbar() {
-  const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-  return (
-    <header className={`sticky top-0 z-50 w-full transition-all ${scrolled ? 'bg-white/85 backdrop-blur-xl border-b border-slate-200/70' : 'bg-white/0'}`}>
-      <Container className="flex h-16 md:h-20 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2.5" aria-label="CWBE Home">
-          <img src={BRAND.icon} alt="CWBE" className="h-9 w-9 object-contain" />
-          <span className="hidden sm:block text-lg font-bold tracking-tight text-slate-900">CWBE</span>
-        </a>
-        <nav className="hidden md:flex items-center gap-1">
-          {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors rounded-md">
-              {n.label}
-            </a>
-          ))}
-        </nav>
-        <div className="flex items-center gap-2">
-          <a href={waLink()} target="_blank" rel="noreferrer" className="hidden sm:inline-flex h-9 items-center gap-1.5 px-3 text-sm font-medium text-slate-600 hover:text-slate-900">
-            <MessageCircle className="h-4 w-4" /> WhatsApp
-          </a>
-          <a href="#free-prototype">
-            <Button className="bg-[#1E293B] hover:bg-[#0f172a] text-white shadow-soft h-10 px-4 text-sm font-semibold">
-              Get Free Prototype <ArrowRight className="ml-1.5 h-4 w-4" />
-            </Button>
-          </a>
-          <button onClick={() => setOpen(!open)} className="md:hidden ml-1 inline-flex h-10 w-10 items-center justify-center rounded-md text-slate-700" aria-label="Toggle menu">
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
-        </div>
-      </Container>
-      <AnimatePresence>
-        {open && (
-          <fmMotion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="md:hidden overflow-hidden border-t border-slate-200 bg-white">
-            <div className="px-5 py-3 flex flex-col">
-              {NAV.map((n) => (
-                <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="py-3 text-base font-medium text-slate-700 border-b border-slate-100 last:border-0">
-                  {n.label}
-                </a>
-              ))}
-            </div>
-          </fmMotion.div>
-        )}
-      </AnimatePresence>
-    </header>
-  )
 }
 
 /* ==================== HERO ==================== */
@@ -881,69 +828,6 @@ function ContactMini() {
         </div>
       </Container>
     </section>
-  )
-}
-
-/* ==================== FOOTER ==================== */
-function Footer() {
-  return (
-    <footer className="bg-[#0f172a] text-slate-300">
-      <Container className="py-14">
-        <div className="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10">
-          <div>
-            <div className="flex items-center gap-2.5">
-              <img src={BRAND.icon} alt="CWBE" className="h-10 w-10 object-contain" />
-              <div>
-                <div className="text-white text-lg font-bold tracking-tight">CWBE</div>
-                <div className="text-xs text-slate-400">Code With Belief</div>
-              </div>
-            </div>
-            <p className="mt-4 text-sm text-slate-400 max-w-sm leading-relaxed">Premium, conversion-focused websites for local businesses. See your homepage before paying a single rupee.</p>
-            <div className="mt-5 flex items-center gap-3">
-              <a href={waLink()} target="_blank" rel="noreferrer" className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/15" aria-label="WhatsApp"><MessageCircle className="h-4 w-4" /></a>
-              <a href={`mailto:${BRAND.email}`} className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/15" aria-label="Email"><Mail className="h-4 w-4" /></a>
-              <a href="#" className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/15" aria-label="Instagram"><Instagram className="h-4 w-4" /></a>
-              <a href="#" className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-white/15" aria-label="LinkedIn"><Linkedin className="h-4 w-4" /></a>
-            </div>
-          </div>
-          <div>
-            <div className="text-white font-semibold mb-3">Company</div>
-            <ul className="space-y-2 text-sm">
-              <li><a className="hover:text-white" href="#about">About</a></li>
-              <li><a className="hover:text-white" href="#projects">Projects</a></li>
-              <li><a className="hover:text-white" href="#pricing">Pricing</a></li>
-              <li><a className="hover:text-white" href="#contact">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <div className="text-white font-semibold mb-3">Industries</div>
-            <ul className="space-y-2 text-sm">
-              {INDUSTRIES.map((i) => (
-                <li key={i.name}><a href="#free-prototype" className="hover:text-white">{i.name}</a></li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <div className="text-white font-semibold mb-3">Get in touch</div>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5" /> +91 89274 72571</li>
-              <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5" /> {BRAND.email}</li>
-              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5" /> {BRAND.location}</li>
-            </ul>
-            <a href="#free-prototype" className="mt-4 inline-flex">
-              <Button className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white h-10 text-sm font-semibold">Get Free Prototype <ArrowRight className="ml-1.5 h-4 w-4" /></Button>
-            </a>
-          </div>
-        </div>
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-400">
-          <div>© {new Date().getFullYear()} CWBE — Code With Belief. All rights reserved.</div>
-          <div className="flex gap-5">
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms</a>
-          </div>
-        </div>
-      </Container>
-    </footer>
   )
 }
 
