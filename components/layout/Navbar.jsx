@@ -1,3 +1,15 @@
+import { useState, useEffect } from "react";
+import { AnimatePresence, motion as fmMotion } from "framer-motion";
+
+import { MessageCircle, ArrowRight, Menu, X } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+
+import { BRAND } from "@/data/brand";
+import { waLink } from "@/lib/whatsapp";
+import { NAV } from "@/data/navigation";
+import Container from "../shared/container";
+
 /* ==================== NAVBAR ==================== */
 export default function Navbar() {
   const [open, setOpen] = useState(false)
