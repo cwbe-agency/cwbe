@@ -9,6 +9,7 @@ import { BRAND } from "@/data/brand";
 import { waLink } from "@/lib/whatsapp";
 import Container from '@/components/shared/container';
 import { INDUSTRIES } from "@/data/industries";
+import TrustBar from "@/components/home/TrustBar";
 
 // Shim: render plain DOM elements, strip framer-motion animation props.
 // (framer-motion's animate is not engaging in this environment, so we bypass it
@@ -42,14 +43,6 @@ import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
-
-const TRUST_BADGES = [
-  { icon: Sparkles, label: 'Free Homepage Prototype' },
-  { icon: Smartphone, label: 'Mobile Optimized' },
-  { icon: Search, label: 'SEO Ready' },
-  { icon: Bot, label: 'AI Search Ready' },
-  { icon: Zap, label: 'Fast Delivery' },
-]
 
 const PAIN_POINTS = [
   { title: "Customers can't find you online", body: 'Most local searches end on websites — without one, you’re invisible to ready-to-buy customers.' },
@@ -199,24 +192,6 @@ const SectionHeading = ({ eyebrow, title, subtitle, align = 'center' }) => (
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   show: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] } }),
-}
-
-/* ==================== TRUST BAR ==================== */
-function TrustBar() {
-  return (
-    <section className="border-y border-slate-200 bg-slate-50/60 py-5">
-      <Container>
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 md:gap-x-12">
-          {TRUST_BADGES.map(({ icon: Icon, label }) => (
-            <div key={label} className="flex items-center gap-2 text-sm font-medium text-slate-600">
-              <Icon className="h-4 w-4 text-[#2563EB]" />
-              {label}
-            </div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
 }
 
 /* ==================== PAIN POINTS ==================== */
