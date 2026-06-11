@@ -14,13 +14,13 @@ import Container from '@/components/shared/container';
 import SectionHeading from "@/components/shared/SectionHeading";
 import Field from "@/components/shared/Field";
 
-import { INDUSTRIES } from "@/data/industries";
 
 // Hope Page Components
 import TrustBar from "@/components/home/TrustBar";
 import PainPoints from "@/components/home/PainPoints";
 import SolutionPillars from "@/components/home/SolutionPillars";
 import WhyChoose from "@/components/home/WhyChoose";
+import Industries from "@/components/home/Industries";
 
 // Shim: render plain DOM elements, strip framer-motion animation props.
 // (framer-motion's animate is not engaging in this environment, so we bypass it
@@ -158,28 +158,6 @@ const FAQS = [
   { q: 'Do you write the content?', a: 'We provide a structured content guide and can write basic homepage copy. For full blog or service copywriting, custom packages are available.' },
   { q: 'How do I get started?', a: 'Click “Get Free Prototype”, fill the short form (or WhatsApp Aryan directly). You’ll have your free homepage prototype in 2–3 business days.' },
 ]
-
-/* ==================== INDUSTRIES ==================== */
-function Industries() {
-  return (
-    <section className="py-20 md:py-28 bg-slate-50/60 border-y border-slate-200">
-      <Container>
-        <SectionHeading eyebrow="Industries We Serve" title="Local Businesses Across India." subtitle="Templates tailored to how customers actually search for your kind of business." />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {INDUSTRIES.map((ind, i) => (
-            <motion.a key={ind.name} href="#free-prototype" initial="hidden" whileInView="show" viewport={{ once: true }} custom={i} variants={fadeUp} className="group rounded-2xl border border-slate-200 bg-white p-5 hover:border-[#2563EB] hover:shadow-card transition-all">
-              <div className="h-11 w-11 rounded-xl bg-blue-50 flex items-center justify-center text-[#2563EB] group-hover:bg-[#2563EB] group-hover:text-white transition-colors">
-                <ind.icon className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 text-base font-semibold text-slate-900">{ind.name}</h3>
-              <p className="mt-1 text-xs text-slate-500">{ind.tag}</p>
-            </motion.a>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
-}
 
 /* ==================== PROJECTS ==================== */
 function Projects() {
