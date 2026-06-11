@@ -1,17 +1,9 @@
 /* ==================== TRUST SIGNALS ==================== */
 import  Container from "@/components/shared/Container";
 import SectionHeading from "@/components/shared/SectionHeading";
-import { FileCheck, Users, Eye, Rocket, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
-
-const TRUST_SIGNALS = [
-  { icon: FileCheck, title: 'Transparent Pricing', body: 'Fixed packages. No hidden fees. No surprises at the end.' },
-  { icon: Users, title: 'Direct Founder Communication', body: 'You speak to Aryan directly — every brief, every revision.' },
-  { icon: Eye, title: 'Free Prototype First', body: 'No upfront commitment. Approve the design, then pay.' },
-  { icon: Rocket, title: 'Modern Technologies', body: 'Next.js, React, Tailwind — same stack used by Stripe & Linear.' },
-  { icon: Clock, title: 'Fast Delivery', body: 'Most websites delivered in under 14 days.' },
-]
+import { TRUST_SIGNALS } from "@/data/home/trust-signals";
 
 function TrustSignals() {
   return (

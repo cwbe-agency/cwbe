@@ -1,14 +1,6 @@
 /* ==================== TRUST BAR ==================== */
-import { Bot, Search, Smartphone, Sparkles, Zap } from 'lucide-react';
 import Container from "@/components/shared/Container";
-
-const TRUST_BADGES = [
-  { icon: Sparkles, label: 'Free Homepage Prototype' },
-  { icon: Smartphone, label: 'Mobile Optimized' },
-  { icon: Search, label: 'SEO Ready' },
-  { icon: Bot, label: 'AI Search Ready' },
-  { icon: Zap, label: 'Fast Delivery' },
-]
+import { TRUST_BADGES } from "@/data/home/trust-bar";
 
 function TrustBar() {
   return (
