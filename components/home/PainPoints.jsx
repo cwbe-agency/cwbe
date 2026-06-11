@@ -1,6 +1,8 @@
 /* ==================== PAIN POINTS ==================== */
 import { motion } from 'framer-motion'
 import Container from '@/components/shared/Container'
+import SectionHeading from '@/components/shared/SectionHeading'
+import { fadeUp } from "@/lib/animations";
 
 
 const PAIN_POINTS = [
@@ -11,28 +13,6 @@ const PAIN_POINTS = [
   { title: 'Too dependent on social media', body: 'Algorithms change. Your website is the only asset you actually own.' },
   { title: 'Losing enquiries every week', body: 'No clear CTA, no WhatsApp button, no contact form — leads slip away silently.' },
 ]
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  show: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] } }),
-}
-
-const SectionHeading = ({ eyebrow, title, subtitle, align = 'center' }) => (
-  <div className={`max-w-3xl ${align === 'center' ? 'mx-auto text-center' : ''} mb-12 md:mb-16`}>
-    {eyebrow && (
-      <div className={`inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 shadow-soft ${align === 'center' ? '' : ''}`}>
-        <span className="h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
-        {eyebrow}
-      </div>
-    )}
-    <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl text-balance">
-      {title}
-    </h2>
-    {subtitle && (
-      <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-600 text-pretty">{subtitle}</p>
-    )}
-  </div>
-)
 
 function PainPoints() {
   return (

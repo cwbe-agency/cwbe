@@ -7,7 +7,13 @@ import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import { BRAND } from "@/data/brand";
 import { waLink } from "@/lib/whatsapp";
+import { fadeUp } from "@/lib/animations";
+
+// Shared components
 import Container from '@/components/shared/container';
+import SectionHeading from "@/components/shared/SectionHeading";
+import Field from "@/components/shared/Field";
+
 import { INDUSTRIES } from "@/data/industries";
 import TrustBar from "@/components/home/TrustBar";
 import PainPoints from "@/components/home/PainPoints";
@@ -163,28 +169,6 @@ const FAQS = [
   { q: 'Do you write the content?', a: 'We provide a structured content guide and can write basic homepage copy. For full blog or service copywriting, custom packages are available.' },
   { q: 'How do I get started?', a: 'Click “Get Free Prototype”, fill the short form (or WhatsApp Aryan directly). You’ll have your free homepage prototype in 2–3 business days.' },
 ]
-
-const SectionHeading = ({ eyebrow, title, subtitle, align = 'center' }) => (
-  <div className={`max-w-3xl ${align === 'center' ? 'mx-auto text-center' : ''} mb-12 md:mb-16`}>
-    {eyebrow && (
-      <div className={`inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 shadow-soft ${align === 'center' ? '' : ''}`}>
-        <span className="h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
-        {eyebrow}
-      </div>
-    )}
-    <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl text-balance">
-      {title}
-    </h2>
-    {subtitle && (
-      <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-600 text-pretty">{subtitle}</p>
-    )}
-  </div>
-)
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  show: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.06, duration: 0.5, ease: [0.22, 1, 0.36, 1] } }),
-}
 
 /* ==================== SOLUTION PILLARS ==================== */
 function SolutionPillars() {
@@ -561,14 +545,6 @@ function PrototypeForm() {
     </section>
   )
 }
-
-const Field = ({ label, error, children }) => (
-  <div>
-    <Label className="text-xs font-semibold text-slate-700 uppercase tracking-wider">{label}</Label>
-    <div className="mt-1.5">{children}</div>
-    {error && <p className="mt-1 text-xs text-rose-500">{error}</p>}
-  </div>
-)
 
 /* ==================== FINAL CTA ==================== */
 function FinalCTA() {
