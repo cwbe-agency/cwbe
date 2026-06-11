@@ -22,6 +22,7 @@ import SolutionPillars from "@/components/home/SolutionPillars";
 import WhyChoose from "@/components/home/WhyChoose";
 import Industries from "@/components/home/Industries";
 import Projects from "@/components/home/Projects";
+import Process from "@/components/home/Process";
 
 // Shim: render plain DOM elements, strip framer-motion animation props.
 // (framer-motion's animate is not engaging in this environment, so we bypass it
@@ -54,13 +55,6 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-
-const PROCESS = [
-  { n: '01', title: 'Request Prototype', body: 'Fill the form. We design a real homepage prototype based on your business — free.' },
-  { n: '02', title: 'Review & Approve', body: 'See your design live. Request changes. Approve only when you love it.' },
-  { n: '03', title: 'Development', body: 'We build it fully responsive, SEO-ready, and AI-search-ready in 7–14 days.' },
-  { n: '04', title: 'Launch & Support', body: 'Go live with hosting setup, Google indexing, analytics & ongoing support.' },
-]
 
 const TRUST_SIGNALS = [
   { icon: FileCheck, title: 'Transparent Pricing', body: 'Fixed packages. No hidden fees. No surprises at the end.' },
@@ -131,34 +125,6 @@ const FAQS = [
   { q: 'Do you write the content?', a: 'We provide a structured content guide and can write basic homepage copy. For full blog or service copywriting, custom packages are available.' },
   { q: 'How do I get started?', a: 'Click “Get Free Prototype”, fill the short form (or WhatsApp Aryan directly). You’ll have your free homepage prototype in 2–3 business days.' },
 ]
-
-/* ==================== PROCESS ==================== */
-function Process() {
-  return (
-    <section className="py-20 md:py-28 bg-[#1E293B] text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.06] bg-grid" />
-      <Container className="relative">
-        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium text-blue-200">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#60A5FA]" />
-            How We Work
-          </div>
-          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-balance">A simple, transparent 4-step process.</h2>
-          <p className="mt-4 text-lg text-slate-300">No long contracts. No agency bureaucracy. From request to launch in days, not months.</p>
-        </div>
-        <div className="grid md:grid-cols-4 gap-5">
-          {PROCESS.map((s, i) => (
-            <motion.div key={s.n} initial="hidden" whileInView="show" viewport={{ once: true }} custom={i} variants={fadeUp} className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6">
-              <div className="text-sm font-mono font-bold text-[#60A5FA]">{s.n}</div>
-              <h3 className="mt-3 text-lg font-semibold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-300">{s.body}</p>
-            </motion.div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
-}
 
 /* ==================== TRUST SIGNALS ==================== */
 function TrustSignals() {
