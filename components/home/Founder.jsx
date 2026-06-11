@@ -2,7 +2,7 @@
 import { MessageCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Container from '@/components/shared/Container'
-import { Button } from '@/components/ui/Button'
+import { Button } from '@/components/ui/button'
 import { waLink } from "@/lib/whatsapp";
 import { BRAND } from "@/data/brand";
 

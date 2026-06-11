@@ -1,17 +1,9 @@
 'use client'
 
 import { useState, useEffect, createElement } from 'react'
-import { motion as fmMotion, AnimatePresence } from 'framer-motion'
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
-import { BRAND } from "@/data/brand";
-import { waLink } from "@/lib/whatsapp";
-
-// Shared components
-import Container from '@/components/shared/Container';
-import SectionHeading from "@/components/shared/SectionHeading";
-import Field from "@/components/shared/Field";
 
 
 // Hope Page Components
@@ -47,16 +39,6 @@ const motion = new Proxy({}, {
     return C
   },
 })
-import { toast } from 'sonner'
-import {
-  ArrowRight, Check, CheckCircle2, Sparkles, Zap, Search, Bot, Smartphone, ShieldCheck,
-  Star, Menu, X, MessageCircle, Phone, Mail, MapPin, ChevronDown, Rocket, TrendingUp,
-  Building2, UtensilsCrossed, Stethoscope, Store, Hammer, Globe, Eye, FileCheck, ArrowUpRight,
-  Send, Clock, Users, Award, Linkedin, Instagram, Twitter,
-} from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 
 /* ==================== APP ==================== */
 function App() {
