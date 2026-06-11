@@ -15,8 +15,11 @@ import SectionHeading from "@/components/shared/SectionHeading";
 import Field from "@/components/shared/Field";
 
 import { INDUSTRIES } from "@/data/industries";
+
+// Hope Page Components
 import TrustBar from "@/components/home/TrustBar";
 import PainPoints from "@/components/home/PainPoints";
+import SolutionPillars from "@/components/home/SolutionPillars";
 
 // Shim: render plain DOM elements, strip framer-motion animation props.
 // (framer-motion's animate is not engaging in this environment, so we bypass it
@@ -50,12 +53,6 @@ import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
-
-const PILLARS = [
-  { icon: ShieldCheck, title: 'Build Trust', body: 'Professional design, clear messaging, and visible social proof so visitors believe in your business within seconds.' },
-  { icon: TrendingUp, title: 'Generate Enquiries', body: 'Conversion-first layouts with WhatsApp, forms, and CTAs placed exactly where buyers decide.' },
-  { icon: Search, title: 'Increase Visibility', body: 'Built-in SEO foundations and AI-search-ready structure so Google and ChatGPT can recommend you.' },
-]
 
 const WHY_CHOOSE = [
   { icon: Eye, title: 'Free Homepage Prototype', body: 'See your actual homepage before paying a single rupee.' },
@@ -169,28 +166,6 @@ const FAQS = [
   { q: 'Do you write the content?', a: 'We provide a structured content guide and can write basic homepage copy. For full blog or service copywriting, custom packages are available.' },
   { q: 'How do I get started?', a: 'Click “Get Free Prototype”, fill the short form (or WhatsApp Aryan directly). You’ll have your free homepage prototype in 2–3 business days.' },
 ]
-
-/* ==================== SOLUTION PILLARS ==================== */
-function SolutionPillars() {
-  return (
-    <section id="services" className="py-20 md:py-28 bg-slate-50/60 border-y border-slate-200">
-      <Container>
-        <SectionHeading eyebrow="How CWBE Helps" title="Websites That Don't Just Look Good — They Win Customers." subtitle="Three pillars baked into every project we ship." />
-        <div className="grid md:grid-cols-3 gap-5">
-          {PILLARS.map((p, i) => (
-            <motion.div key={p.title} initial="hidden" whileInView="show" viewport={{ once: true }} custom={i} variants={fadeUp} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-soft">
-              <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-[#1E293B] to-[#2563EB] flex items-center justify-center text-white">
-                <p.icon className="h-6 w-6" />
-              </div>
-              <h3 className="mt-5 text-xl font-bold text-slate-900">{p.title}</h3>
-              <p className="mt-2 text-slate-600 leading-relaxed">{p.body}</p>
-            </motion.div>
-          ))}
-        </div>
-      </Container>
-    </section>
-  )
-}
 
 /* ==================== WHY CHOOSE ==================== */
 function WhyChoose() {
