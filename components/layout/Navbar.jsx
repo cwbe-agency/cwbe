@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { BRAND } from "@/data/brand";
 import { waLink } from "@/lib/whatsapp";
 import { NAV } from "@/data/navigation";
-import Container from "../shared/container";
+import Container from "../shared/Container";
 
 /* ==================== NAVBAR ==================== */
 export default function Navbar() {

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 
-import Container from '@/components/shared/container';
+import Container from '@/components/shared/Container';
 import SectionHeading from "@/components/shared/SectionHeading";
 import { ShieldCheck, TrendingUp, Search } from "lucide-react";
 

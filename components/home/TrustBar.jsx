@@ -1,6 +1,6 @@
 /* ==================== TRUST BAR ==================== */
 import { Bot, Search, Smartphone, Sparkles, Zap } from 'lucide-react';
-import Container from "@/components/shared/container";
+import Container from "@/components/shared/Container";
 
 const TRUST_BADGES = [
   { icon: Sparkles, label: 'Free Homepage Prototype' },

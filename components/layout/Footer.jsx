@@ -1,6 +1,6 @@
 import { BRAND } from "@/data/brand";
 import { waLink } from "@/lib/whatsapp";
-import Container from "../shared/container";
+import Container from "../shared/Container";
 import { ArrowRight, Instagram, Linkedin, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { INDUSTRIES } from "@/data/industries";

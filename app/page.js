@@ -10,7 +10,7 @@ import { waLink } from "@/lib/whatsapp";
 import { fadeUp } from "@/lib/animations";
 
 // Shared components
-import Container from '@/components/shared/container';
+import Container from '@/components/shared/Container';
 import SectionHeading from "@/components/shared/SectionHeading";
 import Field from "@/components/shared/Field";
 
