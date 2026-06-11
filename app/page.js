@@ -18,10 +18,10 @@ import TrustSignals from "@/components/home/TrustSignals";
 import Pricing from "@/components/home/Pricing";
 import FAQ from "@/components/home/FAQ";
 import Founder from "@/components/home/Founder";
-import PrototypeForm from "@/components/home/PrototypeForm";
+import PrototypeForm from "@/components/forms/PrototypeForm";
 import FinalCTA from "@/components/home/FinalCTA";
 import WhatsAppFloat from "@/components/home/WhatsAppFloat";
-import ContactMini from "@/components/home/ContactMini";
+import ContactMini from "@/components/forms/ContactMini";
 
 // Shim: render plain DOM elements, strip framer-motion animation props.
 // (framer-motion's animate is not engaging in this environment, so we bypass it
