@@ -1,49 +1,51 @@
 export const PRICING_FAQS = [
   {
-    question: "Do I need to pay the full amount upfront?",
-    answer:
-      "No. We typically work with milestone-based payments. You'll know exactly what you're paying for before development begins.",
+    q: "Do I need to pay the full amount upfront?",
+    a: "No. Payments are milestone-based. You'll know exactly what you're paying for before development begins.",
   },
 
   {
-    question: "Is the free homepage prototype really free?",
-    answer:
-      "Yes. We'll design a homepage concept for your business before asking you to commit to a full website package.",
+    q: "Is the free homepage prototype really free?",
+    a: "Yes. We create a homepage concept for your business before asking you to commit to a full website package.",
   },
 
   {
-    question: "Will I own the website after completion?",
-    answer:
-      "Yes. The website belongs to your business. You retain ownership of the website assets, content and source code.",
+    q: "Will I own the website after completion?",
+    a: "Yes. You retain ownership of your website, content and source code upon project completion.",
   },
 
   {
-    question: "Can I upgrade my package later?",
-    answer:
-      "Absolutely. Many clients start with a smaller package and add blogs, landing pages, integrations or custom features later.",
+    q: "Are there any hidden monthly charges?",
+    a: "No. Website development is a one-time cost. Hosting and domain renewals are paid directly to the providers in your own name.",
   },
 
   {
-    question: "Do the packages include hosting and domain?",
-    answer:
-      "Domain and hosting costs are separate because they are purchased directly in your name. We help you choose and set everything up.",
+    q: "What is included in every package?",
+    a: "Every package includes responsive design, SEO foundations, SSL setup, Google indexing assistance and direct support during launch.",
   },
 
   {
-    question: "How many revisions are included?",
-    answer:
-      "Reasonable revisions are included during the design phase to ensure the website matches your business requirements.",
+    q: "Can I upgrade my package later?",
+    a: "Absolutely. You can add pages, blogs, booking systems, CRM integrations or custom functionality as your business grows.",
   },
 
   {
-    question: "What happens after the website goes live?",
-    answer:
-      "You'll receive the support period included with your package. Additional maintenance plans are available if needed.",
+    q: "How many revisions are included?",
+    a: "Reasonable revisions are included during the design and development stages to ensure the final website meets your expectations.",
   },
 
   {
-    question: "Can I update website content myself?",
-    answer:
-      "Yes. If your package includes CMS functionality, you can update blogs, text and images without touching code.",
+    q: "What happens after the website goes live?",
+    a: "You'll receive the support period included in your package. Additional maintenance plans are available if required.",
+  },
+
+  {
+    q: "Do hosting and domain costs come separately?",
+    a: "Yes. Hosting and domain registrations are purchased directly in your name to ensure complete ownership and transparency.",
+  },
+
+  {
+    q: "What if none of the packages fit my business?",
+    a: "Our Custom Solution package is designed for unique requirements such as portals, dashboards, ecommerce platforms or advanced integrations.",
   },
 ];
