@@ -15,9 +15,7 @@ import Industries from "@/components/home/Industries";
 import Projects from "@/components/home/Projects";
 import Process from "@/components/home/Process";
 import TrustSignals from "@/components/home/TrustSignals";
-import Pricing from "@/components/home/Pricing";
 import FAQ from "@/components/home/FAQ";
-import Founder from "@/components/home/Founder";
 import PrototypeForm from "@/components/forms/PrototypeForm";
 import FinalCTA from "@/components/home/FinalCTA";
 import WhatsAppFloat from "@/components/home/WhatsAppFloat";
@@ -55,9 +53,7 @@ function App() {
         <Projects />
         <Process />
         <TrustSignals />
-        <Pricing />
         <FAQ />
-        <Founder />
         <PrototypeForm />
         <ContactMini />
         <FinalCTA />

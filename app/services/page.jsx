@@ -5,6 +5,12 @@ import Footer from "@/components/layout/Footer";
 
 import ServicesHero from "@/components/services/ServicesHero";
 import ServicesGrid from "@/components/services/ServicesGrid";
+import Process from "@/components/home/Process";
+import FAQ from "@/components/home/FAQ";
+import PrototypeForm from "@/components/forms/PrototypeForm";
+import FinalCTA from "@/components/home/FinalCTA";
+import WhyCustomBuild from "@/components/services/WhyCustomBuild";
+
 
 export default function ServicesPage() {
   return (
@@ -14,6 +20,11 @@ export default function ServicesPage() {
       <main>
         <ServicesHero />
         <ServicesGrid />
+        <WhyCustomBuild />
+        <Process />
+        <FAQ />
+        <PrototypeForm />
+        <FinalCTA />
       </main>
 
       <Footer />
