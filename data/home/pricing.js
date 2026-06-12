@@ -26,7 +26,7 @@ export const PRICING = [
   },
   {
     name: 'Business Pro',
-    price: '₹29,999',
+    price: '₹22,999',
     desc: 'For businesses ready to scale operations.',
     cta: 'Go Pro',
     features: [
