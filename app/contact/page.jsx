@@ -10,6 +10,8 @@ import PrototypeForm from "@/components/forms/PrototypeForm";
 import FAQ from "@/components/home/FAQ";
 import {CONTACT_FAQS} from "@/data/contact/faq";
 
+import ContactCTA from "@/components/contact/ContactCTA";
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
@@ -26,6 +28,7 @@ export default function ContactPage() {
             description="Answers to common questions about our contact process and services."
             items={CONTACT_FAQS}
         />
+        <ContactCTA />
       </main>
 
       <Footer />
