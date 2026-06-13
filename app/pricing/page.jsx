@@ -7,6 +7,7 @@ import Pricing from "@/components/home/Pricing";
 import WhoIsItFor from "@/components/pricing/WhoIsItFor";
 import FAQ from "@/components/home/FAQ";
 import { PRICING_FAQS } from "@/data/pricing/faq";
+import PricingCTA from "@/components/pricing/PricingCTA";
 export default function PricingPage() {
   return (
     <>
@@ -21,6 +22,7 @@ export default function PricingPage() {
             description="Everything most businesses want to know before choosing a package."
             items={PRICING_FAQS}
         />
+        <PricingCTA />
       </main>
       <Footer />
     </>
